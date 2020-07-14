@@ -7,9 +7,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PopularComponent implements OnInit {
 
-  constructor() { }
+  public infos: any;
+  public btnEjopy: boolean;
+
+  constructor() {
+
+    this.btnEjopy = false;
+
+    this.infos = [
+      {}
+  ]
+   }
 
   ngOnInit(): void {
+  }
+
+  ejopyStatus(){
+    if (this.btnEjopy == false) {
+      this.btnEjopy = true;
+    }else{
+      this.btnEjopy = false;
+    }
   }
 
 }

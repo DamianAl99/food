@@ -7,9 +7,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TutorialComponent implements OnInit {
 
-  constructor() { }
+  public btnEjopy: boolean;
+
+  constructor() {
+    this.btnEjopy = false;
+   }
 
   ngOnInit(): void {
+  }
+
+  ejopyStatus(){
+    if (this.btnEjopy == false) {
+      this.btnEjopy = true;
+    }else{
+      this.btnEjopy = false;
+    }
   }
 
 }

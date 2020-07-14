@@ -1,1 +1,57 @@
-<p>tutorial works!</p>
+<div class="content-tutorial">
+  <div class="tutorial-title">
+    <h2>Tutoriales</h2>
+  </div>
+
+  <div class="videos-tutoriales" [ngClass]="{ showTutoriales: btnEjopy == true }">
+
+    <a href="https://www.youtube.com/watch?v=x-6JyVXsD2A">
+      <div class="card-tutoriales">
+        <div class="video">
+          <img src="../../assets/img/mbeju.jpg" alt="" srcset="" />
+        </div>
+        <div class="video-descripcion">
+          <h3>Tutorial del Mbeju</h3>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=aMQ_BOc7Evs">
+      <div class="card-tutoriales">
+        <div class="video">
+          <img src="../../assets/img/chipa.jpg" alt="" srcset="" />
+        </div>
+        <div class="video-descripcion">
+          <h3>Tutorial para la Chipa</h3>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=K6zO8BW0_NQ">
+      <div class="card-tutoriales">
+        <div class="video">
+          <img src="../../assets/img/chipas.jpg" alt="" srcset="" />
+        </div>
+        <div class="video-descripcion">
+          <h3>Tutorial de la Chipa So`o</h3>
+        </div>
+      </div>
+    </a>
+
+    <a href="https://www.youtube.com/watch?v=R_XR_iRTwTs">
+      <div class="card-tutoriales">
+        <div class="video">
+          <img src="../../assets/img/vori.jpg" alt="" srcset="" />
+        </div>
+        <div class="video-descripcion">
+          <h3>Tutorial del Vori Vori</h3>
+        </div>
+      </div>
+    </a>
+  </div>
+  <div class="content-button">
+    <div class="button" [ngClass]="{ topButton: btnEjopy == true }">
+      <p (click)="ejopyStatus()">Ejopy :)</p>
+    </div>
+  </div>
+</div>

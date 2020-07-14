@@ -6,5 +6,25 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'food';
+  public title: string;
+  public btnStatus: boolean;
+
+  constructor(){
+    this.btnStatus = false;
+  }
+
+  statusBtn(){
+    if (this.btnStatus == false){
+      this.btnStatus = true;
+    }else{
+      this.btnStatus = false;
+    }
+  }
+  exitMenu(){
+    if (this.btnStatus == false){
+      this.btnStatus = true;
+    }else{
+      this.btnStatus = false;
+    }
+  }
 }
