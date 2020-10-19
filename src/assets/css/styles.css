@@ -487,7 +487,7 @@ nav .menu ul li.logo:hover{
         height: 100vh;
         background: pinkk;
         grid-template-columns: 1fr;/*este*/
-        grid-template-rows: 1fr 1fr;/*este*/
+        grid-template-rows: 250px 100px 1fr;/*este*/
         align-items: center;
     }
     .content-home .text-home{
@@ -566,7 +566,7 @@ nav .menu ul li.logo:hover{
         min-height: 400px;
         background: orangee;
         grid-template-columns: 1fr;/*este*/
-        grid-template-rows: 1fr 1fr;/*este*/
+        grid-template-rows: 250px 80px 1fr;/*este*/
     }
     .content-home .text-home{
         background: orangee;
@@ -641,7 +641,7 @@ nav .menu ul li.logo:hover{
         min-height: 400px;
         background: greenn;
         grid-template-columns: 1fr;/*este*/
-        grid-template-rows: 1fr 1fr;/*este*/
+        grid-template-rows: 265px 1fr 1fr;/*este*//*este*/
     }
     .content-home .text-home{
         background: orangee;
@@ -659,8 +659,8 @@ nav .menu ul li.logo:hover{
         background: greenn;
     }
     .content-home .img-home .img{
-        width: 200px;/*este*/
-        height: 200px;/*este*/;
+        width: 190px;/*este*/
+        height: 190px;/*este*/;
         margin: auto;/*este*/
     }
    
