@@ -1,0 +1,41 @@
+<section class="content-servicios">
+  <h3 class="super-titles">SERVICIOS</h3>
+  <div class="servicios-menuDelDia">
+    <div class="servicios-titles">Menu del Dia</div>
+    <div class="menuDelDia">
+        <div class="menus">
+            <img src="../../../assets/img/tallarin.png" alt="" srcset="">
+            <div class="descripcion">
+                Tallarin<p class="pedir"><a target="_link" href="https://api.whatsapp.com/send?phone=595972435586&text=Hola!%20le%20saludamos%20de%20Jaumina%20Food,%20el%20pedido%20elegido%20alcanza%20el%20costo%20de%2030000gs">Pedir</a></p>
+            </div>
+        </div>
+        <div class="menus">
+            <img src="../../../assets/img/boribori.png" alt="" srcset="">
+            <div class="descripcion">
+                Bori Bori<p class="pedir"><a target="_link" href="https://api.whatsapp.com/send?phone=595972435586&text=Hola!%20le%20saludamos%20de%20Jaumina%20Food,%20el%20pedido%20elegido%20alcanza%20el%20costo%20de%2030000gs">Pedir</a></p>
+            </div>
+        </div>
+        <div class="menus">
+            <img src="../../../assets/img/milanesa.png" alt="" srcset="">
+            <div class="descripcion">
+                Milanesa<p class="pedir"><a target="_link" href="https://api.whatsapp.com/send?phone=595972435586&text=Hola!%20le%20saludamos%20de%20Jaumina%20Food,%20el%20pedido%20elegido%20alcanza%20el%20costo%20de%2030000gs">Pedir</a></p>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="servicios-otrosMenus">
+    <div class="servicios-titles">Menu sobre pedido</div>
+    <div class="otrosMenus">
+        <div class="menus" *ngFor = "let obj of this.precios">
+            <img src="{{obj.img}}" alt="" srcset="">
+            <div class="title-otrosMenus">
+                {{obj.nombre}}
+            </div>
+            <div class="descripcion">
+                <button (click)="restar(obj.id)">-</button><input class="cantidad" type="number" id="input-{{obj.nombre}}" value="{{obj.cantidad}}" ><button (click)="sumar(obj.id)">+</button>
+                <div class="precio"><button (click)="CalcularTotal(obj.id)">Pedir</button> {{obj.precio}} gs</div>
+            </div>
+        </div>
+    </div>
+  </div>
+</section>

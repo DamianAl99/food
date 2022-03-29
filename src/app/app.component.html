@@ -1,11 +1,12 @@
-<nav class="header"  [ngClass]="{'showMenu': btnStatus == true}">
+<nav class="header"  [ngClass]="{'mostrar': btnStatus == true}">
   <div class="menu">
     <ul (click)='exitMenu()'>
-      <li [routerLink]= "['/home']" [routerLinkActive]="['actived']"><a >home</a></li>
-      <li [routerLink]= "['/popular']" [routerLinkActive]="['actived']"><a>popular</a></li>
-      <li class="logo">D</li>
-      <li [routerLink]= "['/tutorial']" [routerLinkActive]="['actived']"><a>tutorial</a></li>
-      <li [routerLink]= "['/contacto']" [routerLinkActive]="['actived']"><a>contacto</a></li>
+      <li [routerLink]= "['/home']" [routerLinkActive]="['actived']"><a >Menu</a></li>
+      <li [routerLink]= "['/popular']" [routerLinkActive]="['actived']"><a>Nosotros</a></li>
+      <li class="logo"><h1>Ja'umina Food</h1></li>
+      <li [routerLink]= "['/tutorial']" [routerLinkActive]="['actived']"><a>Beneficios</a></li>
+      <li [routerLink]= "['/contacto']" [routerLinkActive]="['actived']"><a>Con quienes trabajamos?</a></li>
+      <li [routerLink]= "['/contacto']" [routerLinkActive]="['actived']"><a>Contactos</a></li>
     </ul>
   </div>
 </nav>

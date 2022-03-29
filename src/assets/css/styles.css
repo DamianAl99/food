@@ -16,414 +16,235 @@
 
 /*estilos generales*/
 body{
-    background: white;
-    font-family: var(--subTitle);
-    overflow-x: hidden;
-    color: black;
+    background: transparent;
+    width: 100%;
+    height: 100%;
     font-size: 12px;
-    font-weight: 400;
+    overflow-y: scroll;
+    font-family: 'Merriweather', serif;
 }
 
-/*cabecera*/
-nav{
-    width: 100%;
-    height: 60px;
-    background: white;
-    box-shadow: 0px 0px 4px black;
-    position: relative;
-    z-index: 99;
-}
 .icon-menu{
-    display: none;
-}
-nav .menu ul{
-    width: 80%;
-    height: 60px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    overflow: hidden;
-}
-nav .menu ul li{
-    text-align: center;
-    font-size: 1.3em;
-    /*tamano normal de la letra del menu*/
-    line-height: 56px;
-    transition: 0.2s;
-}
-nav .menu ul li a{
-    text-transform: uppercase;
-    text-decoration: none;
-    color: var(--titleColor);
-}
-nav .menu ul li:hover, 
-nav .menu ul li.actived{
-    border-bottom: 4px solid var(--subrayado);
-    cursor: pointer;
-}
-nav .menu ul li.actived{
-    animation: menuHover 0.8s;
-    font-size: 1.5em;
-    /*tamano cuando se hace click al menu*/
-}
-/*logo*/
-nav .menu ul li.logo{
-    border-radius: 50px;
-    box-shadow: 0px 0px 4px var(--subrayado);
-    font-size: 1.9em;
-    /*letra y tamano del logo*/
-    font-family: var(--titlePrincipal);
-}
-nav .menu ul li.logo:hover{
-    border: none;
-    box-shadow: 0px 0px 8px var(--subrayado);
-}
-
-
-
-/*contenedor principal*/
-.contentAll{
-    width: 100%;
-    height: 100vh;
+    z-index: 99;
+    font-size: 2.5em;
     position: absolute;
     top: 0;
-    
+    right: 0;
+    padding: 20px;
+    background-color: transparent;
+}
+span{
+    color: rgb(255, 255, 0);
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.super-titles{
+    font-size: 2em;
+    text-align: center;
+}
+.contentAll{
+    position: absolute;
+    top: 0;
+    width: 100%;
 }
 
-/*home*/
-.content-home{
+nav{
     width: 100%;
-    min-height: 500px;
-    height: 100vh;
+    height: 350px;
+    padding-top: 65px;
+    background-color: rgb(48, 48, 48);
     position: relative;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    background: reddd;
+    transform: translateY(-500px);
 }
-.content-home .text-home{
-    background: orangee;
-    display: grid;
-    align-items: center;
+.mostrar{
+    transform: translateY(0);
+    transition: .2s linear;
+    z-index: 80;
 }
-.content-home .text-home .text{
-    background: greenn;
-    width: 30%;
-    margin: 120px 5%;
+nav .menu{
+    width: 90%;
+    margin: auto;
 }
-.content-home .text-home .text h1{
-    font-size: 6.5em;
-    /*texto principal, tamano*/
-    font-family: var(--titlePrincipal);
+nav .menu ul li{
+    padding: 10px 0 10px 0;
+    text-align: center;
+    font-size: 2em;
+    border-bottom: 1px solid black;
 }
-.content-home .img-home{
-    background: greenn;
-    display: grid;
-    align-items: center;
+nav .menu ul li:hover{
+    color: white;
+    background-color: black;
 }
-.content-home .img-home .img{
+
+
+main{
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    position: relative;
+    clip-path: polygon(100% 0, 100% 84%, 50% 100%, 0 84%, 0 0);
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .content-home-background{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: 0;
+}
+main header{
+    width: 90%;
+    margin-left: 5%;
+    background-color: transparent;
+    z-index: 9;
+    position: relative;
+}
+main header .text-home{
+    width: 100%;
+    margin-top: 60px;
+    font-size: 2.5em;
+    background-color: transparent;
+    text-align: center;
+    color: rgb(187, 187, 187);
+}
+main header .img-home{
     width: 250px;
     height: 250px;
-    border-radius: 100%;
-    margin: 160px auto;
-    box-shadow: 0px 0px 8px black;
-    animation: imgGiro 8s infinite linear;
+    margin: 20px auto;
+    background-color: transparent;
 }
-.content-home .img-home .img img{
+main header .img-home .img{
     width: 100%;
     height: 100%;
-    transform: scale(2);
+    overflow: hidden; 
+    border-radius: 50%;
+    box-shadow: 0px 0px 8px rgb(252, 252, 252);
+    animation: imgGiro 40s linear infinite;
 }
-
-
-
-/*--------------------------------------------*/
-/*popular*/
-.content-popular{
-    background: pinkk;
+main header .img-home .img img{
     width: 100%;
-    min-height: 600px;
-    height: 100vh;
-    max-height: 600px;
-    position: fixed;
-}
-.absolute-popular{
-    position: absolute;
-}
-/*text POPULAR*/
-.content-popular .principal-popular{
-    width: 100%;
-    height: 100vh;
-    background: redd;
-    display: grid;
-    align-items: center;
-    position: absolute;
-}
-.content-popular .principal-popular .text-popular{
-    width: 100%;
-    text-align: center;
-    font-family: var(--titlePrincipal);
-    font-size: 3.4em;
-    text-shadow: 0px 0px 8px var(--subrayado);
-}
-
-
-/*contenido,texto, img, title de popular*/
-.content-popular .foods{
-    width: 100%;
-    top: 100vh;
-    padding-top: 4vh;
-    /*para que no se interponga el boton con el texto*/
-    height: auto;
-    position: absolute;
-    background: white;
-    transition: 1s linear;
-}
-.showFoods{
-    display: block;
-    transform: translateY(-85vh);
-    /*85 para que no se interponga el menu y este div*/
-}
-
-.content-popular .foods .content-subtext{
-    width: 95%;
-    background: orangee;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1fr;
-}
-.content-popular .foods .content-subtext .title{
-    text-align: center;
-    font-family: var(--titlePrincipal);
-    font-size: 2em;
-}
-.content-popular .foods .content-subtext .img{
-    background: redd;
-    width: 170px;
-    height: 170px;
-    border-radius: 100px;
-    margin: 10px auto;
-    overflow: hidden;
-    box-shadow: 0px 0px 14px black;
-}
-.content-popular .foods .content-subtext .img img{
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     transform: scale(1.5);
-    width: 100%;
-    height: 100%;
 }
-.content-popular .foods .content-subtext .subtext{
+
+
+.content-servicios{
     width: 100%;
     height: auto;
-    background: greenn;
-    padding: 10px 0;
-    text-align: justify;
-    font-size: 1.1em;
+    background-color: transparent;
+    position: relative;
 }
-
-
-
-
-
-/*tutorial*/
-.content-tutorial{
-    background: pinkk;
-    width: 100%;
-    height: 100vh;
-    min-height: 600px;
-    position: absolute;
-    z-index: 10;
+.content-servicios .servicios-menuDelDia{
+    width: 90%;
+    margin-left: 5%;
+    background-color: transparent;
 }
-/*tutorial title*/
-.content-tutorial .tutorial-title{
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    align-items: center;
-    font-size: 3.4em;
-}
-.content-tutorial .tutorial-title h2{
-    width: 100%;
-    font-family: var(--titlePrincipal);
+.servicios-titles{
+    font-size: 1.8em;
     text-align: center;
-    text-shadow: 0px 0px 8px var(--subrayado);
+    margin-top: 10px;
 }
-
-/*tutorial videos*/
-.content-tutorial .videos-tutoriales{
-    background: white;
-    width: 100%;
-    top: 17vh;
-    margin: auto;
-    height: auto;
+.content-servicios .servicios-menuDelDia .menuDelDia{
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 40px;
-    position: fixed;
-    transition: 1s all;
-    opacity: 0;
-    display: none;
+    grid-gap: 20px;
 }
-.showTutoriales.showTutoriales{
-    opacity: 1;
-    display: grid;
-    animation: tutorial 1s linear;
-    position: absolute;
-    transform: translateX(0);
-}
-.content-tutorial .videos-tutoriales .card-tutoriales{
-    background: orangee;
-    width: 95%;
-    height: 250px;
-    margin: auto;
-    box-shadow: 0px 0px 8px #ccc;
-    border-radius: 2px;
-    transition: 0.5s linear;
-}
-.content-tutorial .videos-tutoriales .card-tutoriales:hover{
-    box-shadow: 0px 0px 14px #ccc;
-}
-.content-tutorial .videos-tutoriales .card-tutoriales .video{
-    width: 100%;
-    height: 80%;
-    margin: auto;
+.content-servicios .servicios-menuDelDia .menuDelDia .menus{
+    background-image: url("../img/mesita.jpg");
     overflow: hidden;
-    background: yelloww;
-    border-radius: 2px;
-}
-.content-tutorial .videos-tutoriales .card-tutoriales .video img{
-    width: 100%;
-    height: 100%;
-    transform: scale(2);
-    transition: 0.5s all;
-}
-.content-tutorial .videos-tutoriales .card-tutoriales .video img:hover{
-    transform: scale(2.2);
-}
-.content-tutorial .videos-tutoriales .card-tutoriales .video-descripcion{
-    text-align: center;
-    color: black;
-}
-
-
-
-
-/*contacto*/
-.content-contact{
-    background: pinkk;
-    width: 100%;
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr 1fr;
-}
-.content-contact .contact{
-    background: redd;
-    width: 95%;
-    height: 75vh;
-    margin: auto;
+    box-shadow: 2px 5px 5px rgb(114, 114, 114);
+    border-radius: 4px;
     display: grid;
     grid-template-columns: 1fr;
-    align-items: center;
 }
-.content-contact .contact .img{
-    background: orange;
-    width: 170px;
-    height: 170px;
+.content-servicios .servicios-menuDelDia .menuDelDia .menus img{
+    background-size: cover;
+    max-width: 100%;
+    height: 200px;
     margin: auto;
-    border-radius: 100px;
-    box-shadow: 0px 0px 15px black;
 }
-.content-contact .contact .img img{
-    width: 100%;
-    height: 100%;
-    border-radius: 100px;
-    transform: scaleX(1.1);
-}
-.content-contact .contact .info{
-    background: greenn;
+.content-servicios .servicios-menuDelDia .menuDelDia .menus div{
+    height: 50px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
     text-align: center;
-    font-family: var(--titlePrincipal);
-    font-size: 2.5em;
+    font-size: 3.5em;
+    font-family: 'Indie Flower', cursive;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.content-servicios .servicios-menuDelDia .menuDelDia .menus div.descripcion .pedir{
+    width: 100%;
+    background: green;
+    cursor: pointer;
 }
 
-/*footer*/
-.content-contact footer{
-    background: var(--subrayado);
-    position: absolute;
-    bottom: 0px;
-    width: 100%;
-    height: auto;
-    border-radius: 40px 0px 0px 0px;
+
+
+
+.content-servicios .servicios-otrosMenus{
+    width: 90%;
+    margin-left: 5%;
+    background-color: transparent;
 }
-.content-contact footer .redes-sociales{
-    margin: auto;
-    background: orangee;
-    width: 70%;
+.content-servicios .servicios-otrosMenus .otrosMenus{
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    text-align: center;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
 }
-.content-contact footer .redes-sociales div{
-    display: grid;
-    align-items: center;
-    color: black;
-    cursor: pointer;
-}
-.content-contact footer .redes-sociales div a{
-    color: black;
-} 
-.curriculum{
-    border: 1px solid var(--subrayado);
-    border-radius: 5px 5px 5px 15px;
-    cursor: pointer;
+.content-servicios .servicios-otrosMenus .otrosMenus .menus{
+    background: transparent;
     overflow: hidden;
-    transition: 0.5s all;
+    box-shadow: 0px 0px 5px rgb(172, 172, 172);
+    border-radius: 4px;
     display: grid;
-    align-items: center;
+    grid-template-columns: 1fr;
 }
-.curriculum:hover{
-    background: white;
-}
-.content-contact footer .redes-sociales div i{
-    font-size: 2.5em;
-}
-
-
-
-
-
-
-/*button de popular y tutoriales*/
-.content-button{
-    background: transparent;
-    width: 100%;
-    z-index: 200;
-    position: absolute;
-    top: 80vh;
-    transition: linear;
-}
-.content-button .button{
-    text-align: center;
-    padding: 10px;
-    width: 150px;
-    background: transparent;
-    box-shadow: 0px 1px 8px var(--subrayado);
+.content-servicios .servicios-otrosMenus .otrosMenus .menus img{
+    background-size: cover;
+    max-width: 100%;
+    height: 200px;
     margin: auto;
-    border-radius: 50px;    
+}
+.content-servicios .servicios-otrosMenus .otrosMenus .menus .title-otrosMenus{
+    text-align: left;
+    font-size: 3em;
+    font-weight: 500;
+    padding-left: 10px;
+    font-family: 'Indie Flower', cursive;
+    background: green;
+    color: white;
+}
+.content-servicios .servicios-otrosMenus .otrosMenus .menus div.descripcion{
+    width: 100%;
+    background: transparent;
     cursor: pointer;
 }
-.topButton{
-    animation: topButton 1.2s linear;
-    transform: translateY(-70vh);
-    /*80 es su top porque en el content button el div pusimos a 80vh del top y al restar -80vh se queda al borde del top*/
+.menus div.descripcion button{
+    padding: 15px;
+    color: white;
+    background: green;
+    border: none;
+    border-radius: 2px;
 }
-.content-button .button:hover{
-    background: var(--subrayado);
-    
+.menus div.descripcion input{
+    padding: 15px;
+    width: 20px;
 }
-.content-button .button p{
-    font-family: var(--subTitle);
-    font-size: 1.2em;
-    font-weight: bold;
+.menus .descripcion .precio{
+    text-align: left;
+    font-size: 2.5em;
+    font-weight: 500;
+    padding-left: 10px;
+    font-family: 'Indie Flower', cursive;
+    color: green;
 }
 
 
@@ -431,286 +252,44 @@ nav .menu ul li.logo:hover{
 
 
 
-
-
-
-/*tamano para moviles*/
-@media only screen and (min-device-width : 0px) and (max-device-width : 320px){
-    /*header nav*/
-    nav{
-        height: 500px;
-        width: 80%;
-        background: var(--fondoBlanco);
-        margin-top: 0;
-        transform: rotate(190deg);
-        transform-origin: top left;
-        transition: 1s all linear;
-        position: fixed;
-    }
-    .showMenu{
-        transform: rotate(0deg);
-    }
-    nav .menu{
-        height: auto;
-    }
-    nav .menu ul{
-        width: 100%;
-        height: auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-        grid-gap: 10px;
-    }
-    nav .menu ul li.logo{
-        grid-row: 1;
-        box-shadow: 2px 0px 10px var(--subrayado);
-        border-radius: 0;
-    }
-
-    /*icon*/
-    .icon-menu{
-        display: block;
-    }
-    .icon-menu i{
-        z-index: 144;
-        position: absolute;
-        left: 20px;
-        top: 20px;
-        color: black;
-        font-size: 2.5em;
-        cursor: pointer;
-    }
-
-    /*home*/
-    .content-home{
-        min-height: 400px;
-        height: 100vh;
-        background: pinkk;
-        grid-template-columns: 1fr;/*este*/
-        grid-template-rows: 250px 100px 1fr;/*este*/
-        align-items: center;
-    }
-    .content-home .text-home{
-        background: redd;
-        display: grid;
-        align-items: bottom;
-    }
-    .content-home .text-home .text{
-        width: 90%;/*este*/
-        margin: 40px auto;/*este*/
-        background: orangee;
-    }
-    .content-home .text-home .text h1{
-        font-size: 4.2em;
-        text-align: center;
-    }
-    .content-home .img-home{
-        background: greenn;
-    }
-    .content-home .img-home .img{
-        background: yelloww;
-        width: 150px;/*este*/
-        height: 150px;/*este*/;
-        margin: 80px auto;/*este*/
-    }
-}
-/*--------------------------------------------*/
-@media only screen and (min-device-width : 321px) and (max-device-width : 474px){
-    /*header nav*/
-    nav{
-        height: 500px;
-        width: 80%;
-        background: var(--fondoBlanco);
-        margin-top: 0;
-        transform: rotate(190deg);
-        transform-origin: top left;
-        transition: 1s all linear;
-    }
-    .showMenu{
-        transform: rotate(0deg);
-    }
-    nav .menu{
-        height: auto;
-    }
-    nav .menu ul{
-        width: 100%;
-        height: auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-        grid-gap: 10px;
-    }
-    nav .menu ul li.logo{
-        grid-row: 1;
-        box-shadow: 2px 0px 10px var(--subrayado);
-        border-radius: 0;
-    }
-
-    /*icon*/
-    .icon-menu{
-        display: block;
-    }
-    .icon-menu i{
-        z-index: 144;
-        position: absolute;
-        left: 20px;
-        top: 20px;
-        color: black;
-        font-size: 2.5em;
-        cursor: pointer;
-    }
-
-    /*home*/
-    .content-home{
-        height: 100vh;
-        min-height: 400px;
-        background: orangee;
-        grid-template-columns: 1fr;/*este*/
-        grid-template-rows: 250px 80px 1fr;/*este*/
-    }
-    .content-home .text-home{
-        background: orangee;
-    }
-    .content-home .text-home .text{
-        width: 75%;/*este*/
-        margin: 50px auto;/*este*/
-        background: redd;
-    }
-    .content-home .text-home .text h1{
-        font-size: 4.5em;
-        text-align: center;
-    }
-    .content-home .img-home{
-        background: greenn;
-    }
-    .content-home .img-home .img{
-        width: 170px;/*este*/
-        height: 170px;/*este*/;
-        margin: auto;/*este*/
-    }
-}
-/*----------------------------------------*/
-@media only screen and (min-device-width : 475px) and (max-device-width : 639px){
-    /*header nav*/
-    nav{
-        height: 500px;
-        width: 80%;
-        background: var(--fondoBlanco);
-        margin-top: 0;
-        transform: rotate(190deg);
-        transform-origin: top left;
-        transition: 1s all linear;
-    }
-    .showMenu{
-        transform: rotate(0deg);
-    }
-    nav .menu{
-        height: auto;
-    }
-    nav .menu ul{
-        width: 100%;
-        height: auto;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-        grid-gap: 10px;
-    }
-    nav .menu ul li.logo{
-        grid-row: 1;
-        box-shadow: 2px 0px 10px var(--subrayado);
-        border-radius: 0;
-    }
-
-    /*icon*/
-    .icon-menu{
-        display: block;
-    }
-    .icon-menu i{
-        z-index: 144;
-        position: absolute;
-        left: 20px;
-        top: 20px;
-        color: black;
-        font-size: 2.5em;
-        cursor: pointer;
-    }
-
-    /*home*/
-    .content-home{
-        height: 100vh;
-        min-height: 400px;
-        background: greenn;
-        grid-template-columns: 1fr;/*este*/
-        grid-template-rows: 265px 1fr 1fr;/*este*//*este*/
-    }
-    .content-home .text-home{
-        background: orangee;
-    }
-    .content-home .text-home .text{
-        width: 50%;/*este*/
-        margin: 50px auto;/*este*/
-        background: redd;
-    }
-    .content-home .text-home .text h1{
-        font-size: 4.8em;
-        text-align: center;
-    }
-    .content-home .img-home{
-        background: greenn;
-    }
-    .content-home .img-home .img{
-        width: 190px;/*este*/
-        height: 190px;/*este*/;
-        margin: auto;/*este*/
-    }
-   
-
-}
-@media only screen and (min-device-width : 475px){
-    .content-tutorial .videos-tutoriales{
-        grid-template-columns: 1fr 1fr;
-        grid-gap: 5px;
-    }
-    /*contact*/
-    .content-contact .contact{
-        grid-template-columns: 1fr 1fr;
-    }
-    .content-contact footer .redes-sociales{
+@media only screen and (min-width: 600px) {
+    .content-servicios .servicios-menuDelDia{
         width: 90%;
-        height: 60px;
-        grid-template-columns: 1fr 1fr 1fr;
-    }
-}
-@media only screen and (min-device-width : 950px){
-    .content-home .text-home .text{
-        width: 30%;
-        margin: 120px 15%;
-        background: redd;
-    }
-    .content-popular .foods .content-subtext{
-        width: 95%;
-        background: orangee;
+        max-width: 1000px;
         margin: auto;
+        background-color: transparent;
+    }
+    .content-servicios .servicios-otrosMenus{
+        width: 90%;
+        max-width: 1000px;
+        margin: auto;
+        background-color: transparent;
+    }
+    .content-servicios .servicios-menuDelDia .menuDelDia{
         display: grid;
-        grid-template-columns: 300px 1fr;
-    }
-    .content-popular .foods .content-subtext .title{
-        grid-column: 1/3;
-    }
-
-    .content-tutorial .videos-tutoriales{
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
         grid-gap: 20px;
     }
-}
-
-
-
-
-
-
-
-
+    .content-servicios .servicios-menuDelDia .menuDelDia .menus:last-child {
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 600px;
+        margin: auto;
+    }
+    .content-servicios .servicios-otrosMenus .otrosMenus{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 20px;
+    }
+    .content-servicios .servicios-otrosMenus .otrosMenus .menus:last-child {
+        display: grid;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        width: 600px;
+        margin: auto;
+    }
+  }
 
 
 
@@ -718,85 +297,11 @@ nav .menu ul li.logo:hover{
 
 /*animaciones*/
 /*menu*/
-@keyframes menuHover {
-    0%{
-        background: var(--subrayado);
-        font-size: 0.5em;
-    }
-    50%{
-        font-size: 1.7em;
-    }
-    100%{
-        background: white;
-        font-size: 1.5em;
-    }
-}
 @keyframes imgGiro {
     0%{
         transform: rotate(0);
     }
-    50%{
-        box-shadow: 5px 5px 15px black;
-    }
     100%{
         transform: rotate(360deg);
-    }
-}
-@keyframes aniMenu {
-    0%{
-        transform: rotate(190deg);
-    }
-    100%{
-        transform: rotate(0deg);
-    }
-}
-@keyframes ejopy{
-    0%{
-        transform: translateY(0vh);
-    }
-    100%{
-        transform: translateY(-100vh);
-    }
-}
-@keyframes topButton{
-    0%{
-        transform: translateY(0vh);
-    }
-    20%{
-        transform: translateY(-70vh);
-    }
-    40%{
-        transform: translateY(-55vh);
-    }
-    60%{
-        transform: translateY(-70vh);
-    }
-    80%{
-        transform: translateY(-65vh);
-    }
-    100%{
-        transform: translateY(-70vh);
-
-    }
-}
-@keyframes tutorial{
-    0%{
-        transform: translateX(-150%);
-    }
-    50%{
-        transform: translateX(20%);
-    }
-    100%{
-        transform: translateX(0);
-    }
-}
-@keyframes a{
-    0%{
-        transform: translateX(-150%);
-        background: var(--subrayado);
-    }
-    100%{
-        transform: translateX(0);
-        background: var(--subrayado);
     }
 }
