@@ -44,7 +44,10 @@ export class ServiciosComponent implements OnInit {
     }
     console.log(text);
     
-    this.editarURLWhatsApp = this.editarURLWhatsApp.replace("TEXT", text+this.totalComida.toString().slice(0, this.editarURLWhatsApp.length-1));
+    this.editarURLWhatsApp = this.editarURLWhatsApp.replace("TEXT", text+this.totalComida.toString()+"gs");
+
+    console.log(this.editarURLWhatsApp);
+    window.location.href= this.editarURLWhatsApp;
   }
 
 

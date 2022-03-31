@@ -40,9 +40,13 @@ a{
     text-decoration: none;
     color: white;
 }
+button{
+    cursor: pointer;
+}
 .super-titles{
-    font-size: 2em;
+    font-size: 2.9em;
     text-align: center;
+    color: yellow;
 }
 .contentAll{
     position: absolute;
@@ -248,6 +252,46 @@ main header .img-home .img img{
 }
 
 
+.other-sections{
+    width: calc(90% - 20px);
+    max-width: 1000px;
+    margin: auto;
+    background-color: black;
+    padding: 10px;
+    margin-top: 80px;
+    margin-bottom: 40px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgb(97, 97, 97);
+}
+.other-sections p{
+    font-size: 2em;
+    text-align: justify;
+    margin-top: 80px;
+    font-weight: 200;
+    color: white;
+}
+br{
+    margin-top: 50px;
+}
+.other-sections div{
+    border: 1px solid yellow;
+    width: 150px;
+    padding: 20px;
+    margin: auto;
+    margin-top: 40px;
+    font-size: 2em;
+    text-align: center;
+    box-shadow: 0px 0px 5px black;
+    color: white;
+    cursor: pointer;
+}
+.other-sections div:hover{
+    border: 2px solid yellow;
+    transition: 0.2s;
+}
+
+
+
 
 
 
@@ -288,6 +332,10 @@ main header .img-home .img img{
         grid-column-end: 3;
         width: 600px;
         margin: auto;
+    }
+    .menus div.descripcion input{
+        padding: 15px;
+        width: 40px;
     }
   }
 
