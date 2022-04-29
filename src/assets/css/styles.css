@@ -34,7 +34,7 @@ body{
     background-color: transparent;
 }
 span{
-    color: rgb(255, 255, 0);
+    color: rgb(1, 216, 1);
 }
 a{
     text-decoration: none;
@@ -46,7 +46,7 @@ button{
 .super-titles{
     font-size: 2.9em;
     text-align: center;
-    color: yellow;
+    color: green;
 }
 .contentAll{
     position: absolute;
@@ -256,7 +256,9 @@ main header .img-home .img img{
     width: calc(90% - 20px);
     max-width: 1000px;
     margin: auto;
-    background-color: black;
+    background-image: url("../img/restaurant2.jpg");
+    background-repeat: repeat-y;
+    object-fit: cover;
     padding: 10px;
     margin-top: 80px;
     margin-bottom: 40px;
@@ -269,6 +271,8 @@ main header .img-home .img img{
     margin-top: 80px;
     font-weight: 200;
     color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px 0 40px 0;
 }
 br{
     margin-top: 50px;

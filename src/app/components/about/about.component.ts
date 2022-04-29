@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { topWindow } from 'src/app/Services/TopWindow';
 
 @Component({
   selector: 'app-about',
@@ -10,6 +11,10 @@ export class AboutComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  DoTopWindows(){
+    topWindow();
   }
 
 }
