@@ -16,6 +16,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ServiciosComponent } from './components/servicios/servicios.component';
 import { AboutComponent } from './components/about/about.component';
 import { BeneficiosComponent } from './components/beneficios/beneficios.component';
+import { ProductosComponent } from './components/productos/productos.component';
 
 @NgModule({
   declarations: [
@@ -24,11 +25,14 @@ import { BeneficiosComponent } from './components/beneficios/beneficios.componen
     ContactComponent,
     ServiciosComponent,
     AboutComponent,
-    BeneficiosComponent
+    BeneficiosComponent,
+    ProductosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
     routing
   ],
   providers: [

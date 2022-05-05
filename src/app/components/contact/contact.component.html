@@ -1,24 +1,26 @@
-<div class="content-contact">
-    <div class="contact">
-        <div class="img">
-        </div>
-        <div class="info">
-            <h2>Damian Almada</h2>
-            <h3>Junior Web Developer</h3>
-        </div>
-    </div>
+<section id="sobre-nosotros" class="other-sections">
+  <h3 class="super-titles">CONTACTOS</h3>
+  <div class="errorMessages" [ngClass]="{'DivError': resultSendMail == false}">{{Message}}</div>
+  <div class="errorMessages" [ngClass]="{'DivCorrecto': resultSendMail == true}">{{Message}}</div>
+  <form #formSendEmail="ngForm" (ngSubmit)="SendEmail(formSendEmail)">
 
-    <footer>
-        <div class="redes-sociales">
-            <div>
-                <i class="far fa-envelope"></i>
-                <a href="#">damiianalmada06@gmail.com</a>
-            </div>
-            <div>
-                <i class="fab fa-instagram"></i>
-                <a href="https://www.instagram.com/damiian_al/">@damiian_al</a>
-            </div>
-            <div class="curriculum"><a href="https://damianar.herokuapp.com/index.html#menu">Portafolio</a></div>
-        </div>
-    </footer>
-</div>
+    <input
+      type="email"
+      placeholder="Ingresa tu Correo"
+      name="mailUser"
+      [(ngModel)]="_sendMail.formSendMail.mailUser"
+      required
+    />
+
+    <input
+      type="text"
+      placeholder="Ingresa tu comentario"
+      name="message"
+      [(ngModel)]="_sendMail.formSendMail.message"
+      required
+    />
+
+    <button type="submit" id="sendInfo">Send Info</button>
+    <button (click)="reset(formSendEmail)">Clear</button>
+  </form>
+</section>

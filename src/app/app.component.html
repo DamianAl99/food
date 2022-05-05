@@ -3,9 +3,9 @@
     <ul (click)='exitMenu()'>
       <li [routerLink]= "['/home']" [routerLinkActive]="['actived']"><a >Menu</a></li>
       <li [routerLink]= "['/sobreNosotros']" [routerLinkActive]="['actived']"><a>Nosotros</a></li>
-      <li class="logo"><h1>Ja'umina Food</h1></li>
+      <li class="logo" [routerLink]= "['/home']"><h1>Ja'umina Food</h1></li>
       <li [routerLink]= "['/beneficios']" [routerLinkActive]="['actived']"><a>Beneficios</a></li>
-      <li [routerLink]= "['/contacto']" [routerLinkActive]="['actived']"><a>Con quienes trabajamos?</a></li>
+      <li [routerLink]= "['/productos']" [routerLinkActive]="['actived']"><a>Con quienes trabajamos?</a></li>
       <li [routerLink]= "['/contacto']" [routerLinkActive]="['actived']"><a>Contactos</a></li>
     </ul>
   </div>

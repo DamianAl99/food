@@ -20,6 +20,7 @@ body{
     width: 100%;
     height: 100%;
     font-size: 12px;
+    overflow-x: none;
     overflow-y: scroll;
     font-family: 'Merriweather', serif;
 }
@@ -53,6 +54,35 @@ button{
     top: 0;
     width: 100%;
 }
+.errorMessages{
+    width: 90% !important;
+    max-width: 1000px !important;
+    margin: auto;
+    height: auto;
+    border: none;
+    display: none !important;
+    overflow: hidden;
+    font-size: 1.4em !important;
+}
+.DivError{
+    background-color: red;
+    color: white;
+    border: none !important;
+    display: block !important;
+}
+.DivCorrecto{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    height: 50px;
+    background-color: green;
+    color: white;
+    border: none !important;
+    display: block !important;
+}
+
+
+
 
 nav{
     width: 100%;
@@ -151,7 +181,7 @@ main header .img-home .img img{
     background-color: transparent;
 }
 .servicios-titles{
-    font-size: 1.8em;
+    font-size: 2.2em;
     text-align: center;
     margin-top: 10px;
 }
@@ -254,7 +284,7 @@ main header .img-home .img img{
 
 .other-sections{
     width: calc(90% - 20px);
-    max-width: 1000px;
+    max-width: 900px;
     margin: auto;
     background-image: url("../img/restaurant2.jpg");
     background-repeat: repeat-y;
@@ -298,6 +328,40 @@ br{
 
 
 
+form{
+    width: Calc(90% - 5px);
+    max-width:Calc(500px - 5px);
+    height: auto;
+    padding: 10px 0 10px 0;
+    background-color: transparent;
+    margin: auto;
+}
+form input{
+    width: 80%;
+    padding: 5px;
+    border-radius: 4px;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 10%;
+}
+form input:nth-child(2){
+    height: 50px;
+}
+form button{
+    width: 100px;
+    border: none;
+    border-radius: 2px;
+    border: 2px solid green;
+    color: white;
+    background-color: transparent;
+    margin-top: 19px;
+    margin-right: 19px;
+    margin-left: 10%;
+    padding: 10px;
+}
+form #sendInfo{
+    background-color: green !important;
+}
 
 
 @media only screen and (min-width: 600px) {
