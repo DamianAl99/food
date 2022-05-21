@@ -2,6 +2,7 @@
   <h3 class="super-titles">CONTACTOS</h3>
   <div class="errorMessages" [ngClass]="{'DivError': resultSendMail == false}">{{Message}}</div>
   <div class="errorMessages" [ngClass]="{'DivCorrecto': resultSendMail == true}">{{Message}}</div>
+  <div class="errorMessages" [ngClass]="{'DivCorrecto': enviando == true}" *ngIf="enviando">Enviando...</div>
   <form #formSendEmail="ngForm" (ngSubmit)="SendEmail(formSendEmail)">
 
     <input
