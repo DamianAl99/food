@@ -1,4 +1,6 @@
-export let Precios = [
+import { productosDTO } from "../models/productosDTO";
+
+export let Precios: productosDTO[] = [
     {
         id: 1,
         precio: 90000,

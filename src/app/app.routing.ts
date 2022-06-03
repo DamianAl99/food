@@ -8,6 +8,7 @@ import { ServiciosComponent } from './components/servicios/servicios.component';
 import { AboutComponent } from './components/about/about.component';
 import { BeneficiosComponent } from './components/beneficios/beneficios.component';
 import { ProductosComponent } from './components/productos/productos.component';
+import { CarritosComponent } from './components/carritos/carritos.component';
 
 
 const appRoutes: Routes = [
@@ -17,7 +18,8 @@ const appRoutes: Routes = [
     {path: 'servicios', component: ServiciosComponent},
     {path: 'sobreNosotros', component: AboutComponent},
     {path: 'productos', component: ProductosComponent},
-    {path: 'beneficios', component: BeneficiosComponent}
+    {path: 'beneficios', component: BeneficiosComponent},
+    {path: 'carritos', component: CarritosComponent}
 ];
 
 export const appRoutingProviders: any[] = [];

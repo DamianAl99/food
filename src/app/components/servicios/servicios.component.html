@@ -33,7 +33,7 @@
             </div>
             <div class="descripcion">
                 <button (click)="restar(obj.id)">-</button><input class="cantidad" type="number" id="input-{{obj.nombre}}" value="{{obj.cantidad}}" ><button (click)="sumar(obj.id)">+</button>
-                <div class="precio"><button (click)="CalcularTotal(obj.id)">Pedir</button> {{obj.precio}} gs</div>
+                <div class="precio"><button (click)="AgregarCarrito(obj)">Pedir</button> {{obj.precio}} gs</div>
             </div>
         </div>
     </div>

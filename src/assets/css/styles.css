@@ -364,6 +364,46 @@ form #sendInfo{
 }
 
 
+
+
+
+.carritos{
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    height: auto;
+    margin-top:80px;
+    z-index: 9;
+    background-color: red;
+    border-radius: 2px;
+}
+.carritos .importProducts{
+    width: 100%;
+    padding: 10px;
+    background-color: orange;
+}
+.carritos .importProducts table{
+    margin: auto;
+}
+.carritos .importProducts table thead{
+    background-color: green;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.carritos .importProducts table thead td{
+   font-size: 1.4em;
+}
+.carritos .importProducts table tbody{
+    border: 2px solid green;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.carritos .importProducts table tbody td{
+    text-align: center;
+}
+
+
 @media only screen and (min-width: 600px) {
     .content-servicios .servicios-menuDelDia{
         width: 90%;

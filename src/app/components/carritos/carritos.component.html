@@ -1,5 +1,19 @@
 <div class="carritos">
+    <h3 class="super-titles">CARRITO DE COMPRAS</h3>
     <div class="importProducts">
-        
+        <table  *ngIf = "this.ProductosLocalStorage.length > 0">
+            <thead>
+                <td>Menu</td>
+                <td>Precio</td>
+                <td>Cantidad</td>
+            </thead>
+            <tbody *ngFor = "let product of this.ProductosLocalStorage">
+                <td>{{product.nombre}}</td>
+                <td>{{product.precio | number}}</td>
+                <td>{{product.cantidad}}</td>
+                 <button (click)="Eliminar(product)">Eliminar</button>
+            </tbody>
+            <div class="btn"><button (click)="EnviarWhatsapp()">Hacer Pedido!</button></div>
+        </table>
     </div>
 </div>
