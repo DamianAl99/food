@@ -30,12 +30,15 @@ export class CarritosComponent implements OnInit {
     
     let text =
       'Hola!%20le%20saludamos%20de%20Jaumina%20Food,%20el pedido%20elegido%20es:%20';
-    let Prodcutos = this.ExtraerDatosDelLocalStorage()
+    let totalPrecios = 0;
+    let Prodcutos = this.ExtraerDatosDelLocalStorage();
+    Prodcutos.map(x=> totalPrecios = totalPrecios + x.precio);
     for(var i=0;i<Prodcutos.length; i++){
       text += `*Producto:%20${Prodcutos[i].nombre},%20`;
       text += `Cantidad:%20${Prodcutos[i].cantidad},%20`;
       text += `Total:%20${Prodcutos[i].precio}`+"%0A";
     }
+    text =+ text + " TOTAL: " + totalPrecios;
     window.location.href = this.editarURLWhatsApp.replace("TEXTO", text);
   }
   /*---------------------------------*/

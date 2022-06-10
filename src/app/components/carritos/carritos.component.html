@@ -1,7 +1,7 @@
 <div class="carritos">
     <h3 class="super-titles">CARRITO DE COMPRAS</h3>
     <div class="importProducts">
-        <table  *ngIf = "this.ProductosLocalStorage.length > 0">
+        <table>
             <thead>
                 <td>Menu</td>
                 <td>Precio</td>
@@ -13,7 +13,9 @@
                 <td>{{product.cantidad}}</td>
                  <button (click)="Eliminar(product)">Eliminar</button>
             </tbody>
-            <div class="btn"><button (click)="EnviarWhatsapp()">Hacer Pedido!</button></div>
+            <div class="btn" *ngIf = "this.ProductosLocalStorage.length > 0"><button (click)="EnviarWhatsapp()">Hacer Pedido!</button></div>
+            <div class="btn" *ngIf = "this.ProductosLocalStorage.length == 0"><button routerLink="/">Seguir eligiendo comidas!!!!</button></div>
+            <div class="btn" *ngIf = "this.ProductosLocalStorage.length > 0"><button routerLink="/">Vovler</button></div>
         </table>
     </div>
 </div>

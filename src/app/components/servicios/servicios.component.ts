@@ -9,17 +9,22 @@ import { Precios } from '../../Services/Precios';
   styleUrls: ['./servicios.component.css'],
 })
 export class ServiciosComponent implements OnInit {
-  public editarURLWhatsApp: string;
   public totalComida: number;
   public precios: object;
   public pedidos: productosDTO[];
+  public divCarrito: boolean = false;
   constructor() {
     this.precios = Precios;
-    this.editarURLWhatsApp =
-      'https://api.whatsapp.com/send?phone=595972435586&text=TEXTO';
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    if([this.pedidos].length > 0){
+      this.divCarrito = true;
+    }else{
+      this.divCarrito = false;
+    }
+  }
+
 
   /*agrega la cantidad con los btns*/
   sumar(id: number): any {
@@ -45,7 +50,8 @@ export class ServiciosComponent implements OnInit {
   }
   VerificarSiYaHayAlgo(): boolean {
     this.pedidos = this.GetListaDePedidos();
-    return this.pedidos != null && [this.pedidos].length > 0 ? true : false;
+    console.log([this.pedidos])
+    return this.pedidos != null && [this.pedidos].length > 0 && [this.pedidos][0].length > 0? true : false;
   }
   GetListaDePedidos(): productosDTO[] {
     if (localStorage.getItem('Pedidos') != null) {

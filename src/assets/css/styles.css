@@ -54,6 +54,15 @@ button{
     top: 0;
     width: 100%;
 }
+.divCarrito{
+    text-align: right;
+    padding: 10px 5px;
+    font-size: 1.5em;
+    color: white;
+    background: green;
+    position: fixed;
+    top:10px;
+}
 .errorMessages{
     width: 90% !important;
     max-width: 1000px !important;
@@ -366,7 +375,9 @@ form #sendInfo{
 
 
 
-
+.blur{
+    filter: blur(4px);
+}
 .carritos{
     width: 90%;
     max-width: 1000px;
@@ -374,22 +385,43 @@ form #sendInfo{
     height: auto;
     margin-top:80px;
     z-index: 9;
-    background-color: red;
+    background-color: transparent;
     border-radius: 2px;
 }
 .carritos .importProducts{
-    width: 100%;
+    width: 80%;
     padding: 10px;
-    background-color: orange;
+    margin: auto;
+    background-color: white;
 }
 .carritos .importProducts table{
     margin: auto;
+    width: 100%;
+}
+.carritos .importProducts table div{
+    margin: auto;
+    width: 100px;
+    margin-top: 20px;
+}
+.carritos .importProducts table div button{
+    border: 2px solid green;
+    border-radius: 2px;
+    background: none;
+    padding: 5px 15px;
+    width: 100px;
+}
+.carritos .importProducts table div button:hover{
+    border: 2px solid green;
+    border-radius: 2px;
+    background: green;
+    color: white;
 }
 .carritos .importProducts table thead{
-    background-color: green;
-    color: white;
+    background-color: transparent;
+    color: green;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 .carritos .importProducts table thead td{
    font-size: 1.4em;
@@ -397,10 +429,16 @@ form #sendInfo{
 .carritos .importProducts table tbody{
     border: 2px solid green;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+.carritos .importProducts table tbody button{
+    border: 2px solid red;
+    border-radius: 2px;
+    background: rgb(237, 116, 116);
 }
 .carritos .importProducts table tbody td{
     text-align: center;
+    padding: 10px
 }
 
 
