@@ -38,7 +38,7 @@ export class CarritosComponent implements OnInit {
       text += `Cantidad:%20${Prodcutos[i].cantidad},%20`;
       text += `Total:%20${Prodcutos[i].precio}`+"%0A";
     }
-    text =+ text + " TOTAL: " + totalPrecios;
+    text += ` TOTAL: ${totalPrecios.toString()}`;
     window.location.href = this.editarURLWhatsApp.replace("TEXTO", text);
   }
   /*---------------------------------*/
